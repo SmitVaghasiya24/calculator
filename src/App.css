@@ -1,0 +1,148 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Container to center the calculator */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+/* Calculator container */
+.calculator {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 360px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Input display area */
+#input {
+  font-size: 2.5rem;
+  color: #333;
+  background-color: #f4f4f4;
+  padding-top: 15px;
+  padding-right: 10px;
+  border-radius: 15px;
+  width: 100%;
+  text-align: right;
+  border: 2px solid #ccc;
+  height: 11vh;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  white-space: nowrap;
+  /* overflow-x: auto; Allow horizontal scrolling */
+}
+
+/* Button container */
+button {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  font-size: 1.8rem;
+  color: #fff;
+  background-color: #4c6ef5;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s ease-in-out;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Button hover effect */
+button:hover {
+  background-color: #3a5bf2;
+  transform: translateY(-5px);
+}
+
+/* Button active effect */
+button:active {
+  background-color: #3348c1;
+  transform: translateY(2px);
+}
+
+/* Operator buttons (addition, subtraction, etc.) */
+button.operator {
+  background-color: #f57c00;
+}
+
+button.operator:hover {
+  background-color: #e65100;
+}
+
+button.operator:active {
+  background-color: #d43f00;
+}
+
+/* Clear button (C) style */
+button#clear {
+  background-color: #e53935;
+}
+
+button#clear:hover {
+  background-color: #c62828;
+}
+
+/* Equal button (=) style */
+button#equal {
+  background-color: #4caf50;
+}
+
+button#equal:hover {
+  background-color: #388e3c;
+}
+
+/* Specific style for '0' button (double width) */
+button#zero {
+  width: 170px;
+}
+
+/* Layout for button rows */
+div {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 400px) {
+  .calculator {
+    width: 280px;
+    padding: 20px;
+  }
+
+  #input {
+    font-size: 2rem;
+  }
+
+  button {
+    width: 65px;
+    height: 65px;
+    font-size: 1.5rem;
+  }
+
+  button#zero {
+    width: 150px;
+  }
+}
